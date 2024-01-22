@@ -13,9 +13,9 @@
 .Icon {
     padding: 10px;
     font-size: 30px;
-    transition: all .2s ease-in-out;
+    /* transition: all .2s ease-in-out; */
 }
 
-.Icon:hover {
+/* .Icon:hover {
     transform: scale(1.5);
-}
+} */

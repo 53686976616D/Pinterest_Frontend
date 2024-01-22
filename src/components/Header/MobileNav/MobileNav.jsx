@@ -7,12 +7,15 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 
 const MobileNav = () => {
+
+  const style = ({ isActive }) => ({ color: isActive ? "black" : "grey", transform: isActive ? 'scale(1.5)' : '' });
+
   return (
     <div className={styles.container}> 
       <NavLink
         to="/"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey" })}
+        style={style}
       >
         <div className={styles.Icon}>
           <GoHomeFill />
@@ -21,7 +24,7 @@ const MobileNav = () => {
       <NavLink
         to="/search"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey" })}
+        style={style}
       >
         <div className={styles.Icon}>
           <HiSearch />
@@ -30,7 +33,7 @@ const MobileNav = () => {
       <NavLink
         to="/create"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey", transform: isActive ? 'scale(1.5)' : '' })}
+        style={style}
       >
         <div className={styles.Icon}>
           <FaPlus />
@@ -39,7 +42,7 @@ const MobileNav = () => {
       <NavLink
         to="/profile"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey", transform: isActive ? 'scale(1.5)' : ''  })}
+        style={style}
       >
         <div className={styles.Icon}>
           <FaUserCircle />
