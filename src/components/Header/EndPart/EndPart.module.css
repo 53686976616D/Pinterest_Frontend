@@ -1,0 +1,13 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(77, 77, 77);
+  }
+  
+  .icon:hover {
+    background-color: rgba(199, 199, 199, 0.725);
+  }

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.button:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.button:active {
+    background-color: black;
+    color: white;
+}
+
+.button:focus {
+    background-color: black;
+    color: white;
+}
+
