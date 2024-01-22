@@ -89,6 +89,7 @@ const PinForm = () => {
                   type="text"
                   placeholder="Add a title"
                   name="title"
+                  required
                   disabled={disabled}
                 />
               </div>
@@ -117,6 +118,7 @@ const PinForm = () => {
                   type="text"
                   placeholder="Choose a board"
                   name="board"
+                  required
                   disabled={disabled}
                 />
               </div>
@@ -129,6 +131,7 @@ const PinForm = () => {
                   type="text"
                   placeholder="Search for a tag"
                   name="taggedTopic"
+                  required
                   disabled={disabled}
                 />
               </div>

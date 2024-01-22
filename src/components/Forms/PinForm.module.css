@@ -107,6 +107,10 @@
   outline: none;
 }
 
+.textarea:focus {
+  outline: 5px solid rgb(185, 224, 239);
+}
+
 .formaction {
   display: flex;
   align-items: center;
@@ -187,6 +191,9 @@
   .inputsection input:focus {
     outline: 4px solid rgb(185, 224, 239);
   }
+  .textarea:focus {
+    outline: 4px solid rgb(185, 224, 239);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -223,7 +230,7 @@
     font-size: 12px;
   }
   .inputsection input {
-    padding: 8px;
+    padding: 10px 8px;
     font-size: 12px;
     border-radius: 10px;
   }
@@ -244,6 +251,9 @@
     font-size: 17px;
   }
   .inputsection input:focus {
+    outline: 3px solid rgb(185, 224, 239);
+  }
+  .textarea:focus {
     outline: 3px solid rgb(185, 224, 239);
   }
 }
@@ -271,6 +281,9 @@
     margin-left: 0px;
   }
   .inputsection input:focus {
+    outline: 2px solid rgb(185, 224, 239);
+  }
+  .textarea:focus {
     outline: 2px solid rgb(185, 224, 239);
   }
 }
@@ -301,6 +314,9 @@
       .inputsection input:focus {
         outline: 2px solid rgb(185, 224, 239);
       }
+      .textarea:focus {
+        outline: 2px solid rgb(185, 224, 239);
+      }
 }
 
 @media screen and (max-width: 601px) {
@@ -309,5 +325,6 @@
   }
   .container {
     margin-top: 70px;
+    margin-bottom: 70px;
   }
 }
