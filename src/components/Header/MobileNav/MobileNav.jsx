@@ -8,7 +8,7 @@ import { FaPlus } from "react-icons/fa6";
 
 const MobileNav = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container}> 
       <NavLink
         to="/"
         className={styles.link}
@@ -30,7 +30,7 @@ const MobileNav = () => {
       <NavLink
         to="/create"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey" })}
+        style={({ isActive }) => ({ color: isActive ? "black" : "grey", transform: isActive ? 'scale(1.5)' : '' })}
       >
         <div className={styles.Icon}>
           <FaPlus />
@@ -39,7 +39,7 @@ const MobileNav = () => {
       <NavLink
         to="/profile"
         className={styles.link}
-        style={({ isActive }) => ({ color: isActive ? "black" : "grey" })}
+        style={({ isActive }) => ({ color: isActive ? "black" : "grey", transform: isActive ? 'scale(1.5)' : ''  })}
       >
         <div className={styles.Icon}>
           <FaUserCircle />
