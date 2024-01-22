@@ -184,6 +184,9 @@
     width: 300px;
     min-height: 240px;
   }
+  .inputsection input:focus {
+    outline: 4px solid rgb(185, 224, 239);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -240,6 +243,9 @@
     padding: 8px 15px;
     font-size: 17px;
   }
+  .inputsection input:focus {
+    outline: 3px solid rgb(185, 224, 239);
+  }
 }
 
 @media screen and (min-width: 425px) and (max-width: 618px) {
@@ -263,6 +269,9 @@
   }
   .inputsection {
     margin-left: 0px;
+  }
+  .inputsection input:focus {
+    outline: 2px solid rgb(185, 224, 239);
   }
 }
 
@@ -288,7 +297,11 @@
       .inputsection {
         margin-left: 0px;
       }
+      .inputsection input:focus {
+        outline: 2px solid rgb(185, 224, 239);
+      }
 }
+
 @media screen and (max-width: 601px) {
   .topText {
     top: 0;
