@@ -153,7 +153,7 @@
 .buttonBox {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: end;
   margin: 25px 0px;
 }
 
@@ -174,4 +174,36 @@
 
 .buttonBox button:active {
   background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 360px;
+    height: 250px;
+  }
+
+  .buttonBox {
+    margin: 7px 0px;
+  }
+
+  .modalTitle {
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .modal {
+    width: 300px;
+    height: 250px;
+  }
+  .modalTitle {
+    margin-top: 3px;
+  }
+
+  .checkBoxLable {
+    font-size: 15px;
+  }
+  .inputsection input {
+    font-size: 15px;
+  }
 }

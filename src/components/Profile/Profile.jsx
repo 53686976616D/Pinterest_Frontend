@@ -6,6 +6,7 @@ import Section from "../Section";
 import IconButton from "../Buttons/IconButton";
 import { NavLink } from "react-router-dom";
 import Board from "../Forms/Board/Board";
+import MobileSearchPin from "./MobileSearchPin";
 
 const Profile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,10 @@ const Profile = () => {
 
   return (
     <Section>
-      <div onClick={() => setIsOpen(false)} style={{ width: '100%', height: '100vh'}}>
+      <div className={styles.search}>
+        <MobileSearchPin />
+      </div>
+      <div onClick={() => setIsOpen(false)} style={{ width: '100%', height: '100vh'}} className={styles.container}>
         <div className={styles.profileContainer}>
           <i className={styles.ProfilePicture}>
             <FaUserCircle />

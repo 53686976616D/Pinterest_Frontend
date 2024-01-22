@@ -15,9 +15,9 @@ const BoardForm = ({ isSetBoard }) => {
   }
 
   return (
-    <div className={styles.containerBG}>
+    <div className={styles.containerBG} onClick={() => isSetBoard(false)}>
       <div className={styles.centered}>
-        <div className={styles.modal}>
+        <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           <p className={styles.modalTitle}>Create board</p>
           <form onSubmit={handleSubmit}>
             <div className={styles.inputsection}>
@@ -46,9 +46,9 @@ const BoardForm = ({ isSetBoard }) => {
               </div>
             </div>
             <p className={styles.buttonBox}>
-              <button type="button" onClick={() => isSetBoard(false)}>
+              {/* <button type="button" onClick={() => isSetBoard(false)}>
                 Cancel
-              </button>
+              </button> */}
               <button type="submit">Create</button>
             </p>
           </form>
