@@ -92,6 +92,7 @@
   border-radius: 15px;
   outline: none;
   border: 1px solid gray;
+  background-color: #efefef4d;
   font-size: 16px;
 }
 
@@ -105,6 +106,7 @@
   border-radius: 15px;
   font-size: 16px;
   outline: none;
+  background-color: #efefef4d;
 }
 
 .textarea:focus {
@@ -167,15 +169,15 @@
 
 .topText {
   border: 1px solid rgb(177, 177, 177);
-    background-color: white;
-    padding: 10px 30px;
-    margin-left: 1px;
-    font-weight: bold;
-    font-size: 20px;
-    width: 100%;
-    position: fixed;
-    top: 70px;
-    z-index: 0;
+  background-color: white;
+  padding: 10px 30px;
+  margin-left: 1px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  z-index: 0;
 }
 
 @media screen and (min-width: 768px) and (max-width: 950px) {
@@ -289,34 +291,34 @@
 }
 
 @media only screen and (max-width: 425px) and (min-width: 320px) {
-    .formContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        margin: 10px;
-        margin-bottom: 30px;
-        width: 250px;
-      }
-      .uploadContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .inputcontainer {
-        width: 300px;
-        height: 100%;
-      }
-      .inputsection {
-        margin-left: 0px;
-      }
-      .inputsection input:focus {
-        outline: 2px solid rgb(185, 224, 239);
-      }
-      .textarea:focus {
-        outline: 2px solid rgb(185, 224, 239);
-      }
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
+    width: 250px;
+  }
+  .uploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .inputcontainer {
+    width: 300px;
+    height: 100%;
+  }
+  .inputsection {
+    margin-left: 0px;
+  }
+  .inputsection input:focus {
+    outline: 2px solid rgb(185, 224, 239);
+  }
+  .textarea:focus {
+    outline: 2px solid rgb(185, 224, 239);
+  }
 }
 
 @media screen and (max-width: 601px) {

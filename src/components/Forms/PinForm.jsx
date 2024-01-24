@@ -4,18 +4,25 @@ import styles from "./PinForm.module.css";
 import { MdDelete } from "react-icons/md";
 import { AiFillFileImage } from "react-icons/ai";
 import { FaArrowCircleUp } from "react-icons/fa";
+import TagSelect from "./Tags/TagSelect";
+import BoardInput from "./Board/BoardInput";
 
 const PinForm = () => {
   const [file, setFile] = useState("File Name");
   const [image, setImage] = useState();
   const [disabled, setDisabled] = useState(true);
+  const [Tags, setTags] = useState();
+  const [board, setBoard] = useState(false);
+  
+  // console.log(Tags);
 
   function handleSubmit(event) {
     event.preventDefault();
 
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
-    console.log(data);
+    const dataValue = {...data, ...Tags};
+    console.log(dataValue);
     event.target.reset();
     setImage();
     setFile("File Name");
@@ -119,21 +126,25 @@ const PinForm = () => {
                   placeholder="Choose a board"
                   name="board"
                   required
+                  autoComplete="off"
                   disabled={disabled}
+                  onClick={() => setBoard(true)}
                 />
               </div>
+              {board && <BoardInput setBoard={setBoard} />}
               <div
                 className={styles.inputsection}
                 style={{ marginBottom: "5px" }}
               >
                 <label htmlFor="taggedTopic">Tagged topics</label>
-                <input
+                {/* <input
                   type="text"
                   placeholder="Search for a tag"
                   name="taggedTopic"
                   required
                   disabled={disabled}
-                />
+                /> */}
+                <TagSelect disabled={disabled} setTags={setTags}/>
               </div>
               <p className={styles.formaction}>
                 <button

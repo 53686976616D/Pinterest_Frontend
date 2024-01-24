@@ -74,7 +74,7 @@ const MidPart = () => {
         </span>
         <form onSubmit={handleClick}>
         <input
-          type="text"
+          type="search"
           name="search"
           placeholder="Search"
           autoComplete="off"

@@ -13,7 +13,7 @@ const MobileSearchPin = () => {
           <HiSearch />
         </span>
         <form>
-          <input type="text" name="search" placeholder="Search Your Pins" required />
+          <input type="search" name="search" placeholder="Search Your Pins" required />
         </form>
       </div>
       <div className={styles.Icons}>
