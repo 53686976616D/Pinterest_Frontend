@@ -5,6 +5,7 @@ import { MdDelete } from "react-icons/md";
 import { AiFillFileImage } from "react-icons/ai";
 import { FaArrowCircleUp } from "react-icons/fa";
 import TagSelect from "./Tags/TagSelect";
+import BoardSelect from "./Board/BoardSelect/BoardSelect";
 import BoardInput from "./Board/BoardInput";
 
 const PinForm = () => {
@@ -12,16 +13,16 @@ const PinForm = () => {
   const [image, setImage] = useState();
   const [disabled, setDisabled] = useState(true);
   const [Tags, setTags] = useState();
+  const [selectBoard, setSelectBoard] = useState('');
   const [board, setBoard] = useState(false);
-  
-  // console.log(Tags);
+
 
   function handleSubmit(event) {
     event.preventDefault();
 
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
-    const dataValue = {...data, ...Tags};
+    const dataValue = { ...data, ...Tags, ...selectBoard };
     console.log(dataValue);
     event.target.reset();
     setImage();
@@ -67,13 +68,18 @@ const PinForm = () => {
                 ) : (
                   <>
                     <FaArrowCircleUp size={35} />
-                    <p className={styles.imgCaption}>Choose a file or drag and drop it here</p>
+                    <p className={styles.imgCaption}>
+                      Choose a file or drag and drop it here
+                    </p>
                   </>
                 )}
               </div>
               <div className={styles.uploadFile}>
                 <section className={styles.uploadedrow}>
-                  <AiFillFileImage color="#1475cf" className={styles.imageIcons}/>
+                  <AiFillFileImage
+                    color="#1475cf"
+                    className={styles.imageIcons}
+                  />
                   <span className={styles.uploadcontent}>
                     {file} -
                     <MdDelete
@@ -120,37 +126,26 @@ const PinForm = () => {
                 />
               </div>
               <div className={styles.inputsection}>
-                <label htmlFor="board">Board</label>
-                <input
-                  type="text"
-                  placeholder="Choose a board"
-                  name="board"
-                  required
-                  autoComplete="off"
-                  disabled={disabled}
-                  onClick={() => setBoard(true)}
-                />
+                <BoardSelect disabled={disabled} setBoard={setBoard} selectBoard={selectBoard}/>
               </div>
-              {board && <BoardInput setBoard={setBoard} />}
+              {board && (
+                <BoardInput
+                  setBoard={setBoard}
+                  setSelectBoard={setSelectBoard}
+                />
+              )}
               <div
                 className={styles.inputsection}
                 style={{ marginBottom: "5px" }}
               >
                 <label htmlFor="taggedTopic">Tagged topics</label>
-                {/* <input
-                  type="text"
-                  placeholder="Search for a tag"
-                  name="taggedTopic"
-                  required
-                  disabled={disabled}
-                /> */}
-                <TagSelect disabled={disabled} setTags={setTags}/>
+                <TagSelect disabled={disabled} setTags={setTags} />
               </div>
               <p className={styles.formaction}>
                 <button
                   type="submit"
                   className={styles.SaveButton}
-                  style={disabled ? {display : 'none'} : {display: 'block'}}
+                  style={disabled ? { display: "none" } : { display: "block" }}
                 >
                   Post
                 </button>

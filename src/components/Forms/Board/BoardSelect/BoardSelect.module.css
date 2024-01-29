@@ -1,0 +1,32 @@
+.board {
+    padding: 0px;
+    border-radius: 15px;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: 1px solid gray;
+    background-color: #efefef4d;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .board img {
+    width: 100%;
+    max-width: 40px;
+    height: 100%;
+    max-height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-left: 5px;
+  }
+
+  /* .board:hover {
+    outline: 5px solid rgb(185, 224, 239);
+  } */
+
+  .boardPlaceholder {
+    color: rgb(136, 136, 136);
+    padding-left: 15px;
+  }

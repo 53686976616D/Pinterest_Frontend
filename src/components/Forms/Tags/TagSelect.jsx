@@ -56,6 +56,7 @@ const TagSelect = ({ disabled, setTags }) => {
       styles={colorStyles}
       placeholder="Search for a tag"
       isDisabled={disabled}
+      required
     />
   );
 };
